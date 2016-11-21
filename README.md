@@ -17,6 +17,12 @@ iex -S mix
 
 # run
 mix run --no-halt
+
+
+#production
+env MIX_ENV=prod mix compile
+env MIX_ENV=prod mix compile.protocols
+env MIX_ENV=prod elixir -pa _build/prod/consolidated -S mix run --no-halt
 ```
 
 ## Meta
