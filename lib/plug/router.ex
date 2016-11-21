@@ -19,8 +19,7 @@ defmodule ExEcho.Plug.Router do
     conn
       |> merge_resp_headers(req_headers)
       |> put_resp_header("origin-path", Enum.join(path, "/"))
-      |> resp(200, req_body)
-      |> send_resp
+      |> send_resp(200, req_body)
   end
 
   match _, do: send_resp(conn, 404, "Not found")
