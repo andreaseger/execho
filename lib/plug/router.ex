@@ -10,6 +10,7 @@ defmodule ExEcho.Plug.Router do
   get "/echo/*path" do
     conn
     |> merge_resp_headers(conn.req_headers)
+    |> put_resp_header("query-string", conn.query_string)
     |> send_resp(200, Enum.join(path, "/"))
   end
 
