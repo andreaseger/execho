@@ -21,7 +21,8 @@ defmodule ExEcho.Mixfile do
 
   defp deps do
     [{:cowboy, "~> 1.0.4"},
-     {:plug, "~> 1.2.2"}
+     {:plug, "~> 1.2.2"},
+     {:distillery, "~> 0.10"}
     ]
   end
 end
