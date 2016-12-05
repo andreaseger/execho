@@ -3,7 +3,7 @@ defmodule ExEcho.Mixfile do
 
   def project do
     [app: :ex_echo,
-     version: "0.2.0",
+     version: "0.2.1",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -15,8 +15,7 @@ defmodule ExEcho.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger, :cowboy, :plug],
-     mod: {ExEcho, []},
-     env: [cowboy_port: 5000]]
+     mod: {ExEcho, []}]
   end
 
   defp deps do

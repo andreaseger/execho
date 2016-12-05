@@ -27,7 +27,7 @@ env MIX_ENV=prod elixir -pa _build/prod/consolidated -S mix run --no-halt
 
 ### Release
 
-- init distillery via `mix distillery.init`
+- init distillery via `mix release.init`
 - look into `rel/config.exs`
 - create release via `env MIX_ENV=prod mix release --env=prod`
 - find tarbal in `rel/ex_echo/releases/<version>/ex_echo.tar.gz`
