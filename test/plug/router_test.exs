@@ -21,7 +21,7 @@ defmodule RouterTest do
 
     assert conn.status == 200
     assert conn.resp_body == "some_path"
-    assert conn.resp_headers == [{"cache-control", "max-age=0, private, must-revalidate"},{"some_header", "with value"}]
+    assert conn.resp_headers == [{"cache-control", "max-age=0, private, must-revalidate"},{"some_header", "with value"},{"query-string", ""}]
   end
 
   test "echo everything" do

@@ -3,7 +3,7 @@ defmodule ExEcho.Mixfile do
 
   def project do
     [app: :ex_echo,
-     version: "0.2.1",
+     version: "0.3.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -20,8 +20,8 @@ defmodule ExEcho.Mixfile do
 
   defp deps do
     [{:cowboy, "~> 1.0.4"},
-     {:plug, "~> 1.2.2"},
-     {:distillery, "~> 0.10"}
+     {:plug, "~> 1.3"},
+     {:distillery, "~> 1.0"}
     ]
   end
 end
